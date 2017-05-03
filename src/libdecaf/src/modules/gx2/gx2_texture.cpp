@@ -173,8 +173,8 @@ setTexture(GX2Texture *texture,
    auto imageAddress = texture->surface.image.getAddress();
    auto mipAddress = texture->surface.mipmaps.getAddress();
 
-   decaf_check(!(mipAddress & 0xff));
-   decaf_check(!(imageAddress & 0xff));
+   //decaf_check(!(mipAddress & 0xff));
+   //decaf_check(!(imageAddress & 0xff));
 
    if (texture->surface.tileMode >= GX2TileMode::Tiled2DThin1 && texture->surface.tileMode != GX2TileMode::LinearSpecial) {
       if ((texture->surface.swizzle >> 16) & 0xFF) {
