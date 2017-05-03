@@ -754,7 +754,7 @@ translate(Shader &shader, const gsl::span<const uint8_t> &binary)
    } catch (translate_exception e) {
       auto assembly = disassemble(binary);
       gLog->critical("GLSL translate exception: {}\nDisassembly:\n{}", e.what(), assembly);
-      decaf_abort(fmt::format("GLSL translate exception: {}", e.what()));
+      //decaf_abort(fmt::format("GLSL translate exception: {}", e.what()));
    }
 
    decaf_check(state.loopStack.size() == 0);
